@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+  margin:0;
+  font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#container{
+  background-image: url("../img/wood.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-attachment: scroll;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "sidebar"
+  "content"
+  "footer";
+}
+
+@media only screen and (max-width: 850px){
+  #container{
+    display: grid;
+    grid-template-columns: 2fr 3.6fr;
+    grid-template-areas:
+    "sidebar intro "     
+    "main main"
+    "footer footer ";
+  }
+
+  ul{
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0.5;
+  }
+
+  .preamble{
+    background-image: url("../img/scroll-vct-2.png");
+    background-attachment: local;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: 850px){
+  #container{
+    padding: 0% 5% 0% 5%;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas:
+    "sidebar intro"
+    "main main"
+    "footer footer";
+  }
+
+  .preamble{
+    background-image: url("../img/scroll-vct.png"); 
+    margin-top: 1%;
+  }
+
+  .sidebar{
+    padding: 15% 5% 15% 5%;
+  }
+}
+
+@media only screen and (min-width: 1300px){
+  #container{
+    grid-template-columns: 2fr 6fr;
+  } 
+
+  .main{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .sidebar{
+    margin-left: 20%;
+  }
+
+  .intro{
+    margin-right: 7.5%;
+  }
+}
+
+a{ 
+  font-weight: bold;
+}
+
+h1, h2, h3{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.intro{
+  grid-area: intro;
+}
+
+.header{
+  grid-area: header;
+  background-color: rgb(255,227,169);
+  padding: 0% 5% 0% 3%;
+  border-color: rgb(66, 33, 11);
+  border-width: 5px;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(0, 0, 0);
+  border-top-style: solid;
+  border-right-style: solid;
+}
+
+.summary{
+  background-color: rgb(255,227,169);
+  padding: 0% 5% 0% 3%;
+  border-color: rgb(66, 33, 11);
+  border-width: 5px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(0, 0, 0);
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+}
+
+.preamble{
+  padding: 5% 5% 10% 5%;
+  background-attachment: local;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+
+.preamble p{
+  font-family: 'Bad Script', cursive;
+  text-align: justify;
+  text-indent: 25px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(238,238,238,0.2472304165893917) 50%, rgba(255,255,255,0) 100%);
+}
+
+.preamble h3{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+}
+
+.preamble p:first-of-type{
+  border-width: 5px;
+  border-top-style: solid;
+  border-radius: 10px;
+}
+
+.preamble p:last-child{
+  border-width: 5px;
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
+
+.main{
+  padding: 0% 10% 0% 10%;
+  grid-area: main;
+  background-image: url("../img/scroll-vct-middle.png");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  border-width: 5px;
+}
+
+.main p{
+  font-family: 'Bad Script', cursive;
+  text-align: justify;
+  text-indent: 25px;
+}
+
+.main p:first-of-type{
+  border-top-style: solid;
+  border-radius: 10px;
+}
+
+.main p:last-child{
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
+
+.main h3{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+}
+
+.supporting{
+  border-width: 8px;
+  border-spacing: 15px 50px;
+  border-top-style:solid;
+  border-bottom-style:solid;
+  border-radius: 70px;
+  border-color: rgb(66, 33, 11);
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  background-image: url("../img/scroll-vct-2.png");
+  background-attachment: local;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sidebar h3{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 20px;
+}
+
+.archives{
+  border-width: 5px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
+.select{
+  border-width: 5px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
+
+.resources{
+  border-width: 5px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
